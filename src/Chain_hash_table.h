@@ -100,7 +100,6 @@ template<typename V>
 void Chain_hash_table<V>::remove(std::string const& key)
 {
     auto& bucket = table_[start_index_(key)];
-    auto end     = bucket.end();
 
     for (auto curr = bucket.begin(); curr != bucket.end(); ++curr) {
         if (curr->key == key) {
